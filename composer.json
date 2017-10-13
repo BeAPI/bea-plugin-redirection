@@ -1,0 +1,13 @@
+{
+  "name": "bea/plugin-redirection",
+  "description": "This plugin force no monitor logs, 404, modified posts in Redirection plugin",
+  "minimum-stability": "stable",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "BeAPI",
+      "email": "human@beapi.fr"
+    }
+  ],
+  "type": "wordpress-muplugin"
+}

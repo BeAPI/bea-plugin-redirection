@@ -1,2 +1,2 @@
 # bea-plugin-redirection
-Force default options to redirection plugin
+Force no monitor logs, 404, modified posts in Redirection plugin
