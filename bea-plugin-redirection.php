@@ -49,7 +49,7 @@ add_filter( 'red_default_options', function ( $args ) {
 /**
  * Modify option value
  */
-add_filter( 'option_redirection_options', function ( $value, $option ) {
+add_filter( 'option_redirection_options', function ( $value, $option = null ) {
 	if ( isset( $value['monitor_post'] ) ) {
 		$value['monitor_post'] = 0;
 	}
