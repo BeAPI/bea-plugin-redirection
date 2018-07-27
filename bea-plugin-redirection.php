@@ -44,12 +44,12 @@ add_filter( 'red_default_options', function ( $args ) {
 		'ip_logging'      => isset( $args['ip_logging'] ) ? $args['ip_logging'] : 0,
 		'rest_api'        => isset( $args['rest_api'] ) ? $args['rest_api'] : 0,
 	);
-}, 10, 1 );
+} );
 
 /**
  * Modify option value
  */
-add_filter( 'option_redirection_options', function ( $value, $option ) {
+add_filter( 'option_redirection_options', function ( $value ) {
 	if ( isset( $value['monitor_post'] ) ) {
 		$value['monitor_post'] = 0;
 	}
@@ -63,4 +63,4 @@ add_filter( 'option_redirection_options', function ( $value, $option ) {
 	}
 
 	return $value;
-}, 10, 2 );
+} );
