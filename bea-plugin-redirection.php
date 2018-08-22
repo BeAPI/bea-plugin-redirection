@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: BEA Redirection
- Version: 1.0.2
+ Version: 1.0.3
  Plugin URI: https://www.beapi.fr
  Description: Force no monitor logs, 404, modified posts in Redirection plugin
  Author: BE API Technical team
@@ -28,22 +28,20 @@
  */
 
 /**
- * Modify default datas on activation plugin
+ * Modify default datas on runtime plugin
  *
  */
 add_filter( 'red_default_options', function ( $args ) {
-	return array(
-		'support'         => false,
-		'token'           => md5( uniqid() ),
-		'monitor_post'    => 0,
-		'auto_target'     => '',
-		'expire_redirect' => - 1,
-		'expire_404'      => - 1,
-		'modules'         => array(),
-		'newsletter'      => false,
-		'ip_logging'      => isset( $args['ip_logging'] ) ? $args['ip_logging'] : 0,
-		'rest_api'        => isset( $args['rest_api'] ) ? $args['rest_api'] : 0,
-	);
+
+	$args['support']         = false;
+	$args['monitor_post']    = 0;
+	$args['auto_target']     = '';
+	$args['expire_redirect'] = - 1;
+	$args['expire_404']      = - 1;
+	$args['modules']         = array();
+	$args['newsletter']      = false;
+
+	return $args;
 } );
 
 /**
